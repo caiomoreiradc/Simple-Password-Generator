@@ -13,7 +13,6 @@ namespace ezPasswordGen
         {
             MostrarSenha();
         }
-
         private void btnCopy_Click(object sender, EventArgs e)
         {
             CopiarSenha();
@@ -22,13 +21,14 @@ namespace ezPasswordGen
         {
             txtSenha.Text = repositorio.GerarSenha(PegarTamanho());
         }
-
         private int PegarTamanho()
         {
+            if(txtTamanho.Text == string.Empty)
+                txtTamanho.Text = "8";
+            
             int tamanho = Convert.ToInt32(txtTamanho.Text);
             return tamanho;
         }
-
         private void CopiarSenha()
         {
             Clipboard.SetText(txtSenha.Text);
