@@ -2,11 +2,11 @@ namespace ezPasswordGen
 {
     public partial class FormPrincipal : Form
     {
-        Repositorio repositorio;
-        public FormPrincipal(Repositorio repositorio)
+        Funcao funcao;
+        public FormPrincipal(Funcao repositorio)
         {
             InitializeComponent();
-            this.repositorio = repositorio;
+            this.funcao = repositorio;
         }
 
         private void btnGerar_Click(object sender, EventArgs e)
@@ -15,23 +15,35 @@ namespace ezPasswordGen
         }
         private void btnCopy_Click(object sender, EventArgs e)
         {
-            CopiarSenha();
+            Clipboard.SetText(txtSenha.Text);
         }
-        private void MostrarSenha()
+        private int GerarTamanho()
         {
-            txtSenha.Text = repositorio.GerarSenha(PegarTamanho());
-        }
-        private int PegarTamanho()
-        {
-            if(txtTamanho.Text == string.Empty)
+            if (txtTamanho.Text == string.Empty)
                 txtTamanho.Text = "8";
             
             int tamanho = Convert.ToInt32(txtTamanho.Text);
             return tamanho;
         }
-        private void CopiarSenha()
+        private void FormatarCaracteres()
         {
-            Clipboard.SetText(txtSenha.Text);
+            if (chbSpecial.Checked == true)
+                funcao.chars = funcao.chars + "!@#$%&*";
+            else if (chbSpecial.Checked == false)
+                funcao.chars = funcao.chars.Replace("!@#$%&*", string.Empty);
         }
+        private string GerarSenha()
+        {
+            FormatarCaracteres();
+
+            string senhaGerada = funcao.GerarSenha(GerarTamanho());
+
+            return senhaGerada;
+        }
+        private void MostrarSenha()
+        {
+            txtSenha.Text = GerarSenha();
+        }
+
     }
 }

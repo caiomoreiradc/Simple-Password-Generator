@@ -8,9 +8,9 @@ namespace ezPasswordGen
         [STAThread]
         static void Main()
         {
-            Repositorio repositorio = new Repositorio();
+            Funcao funcao = new Funcao();
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormPrincipal(repositorio));
+            Application.Run(new FormPrincipal(funcao));
         }
     }
 }

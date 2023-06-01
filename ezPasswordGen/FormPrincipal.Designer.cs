@@ -34,7 +34,7 @@
             btnCopy = new Button();
             txtTamanho = new TextBox();
             Title = new Label();
-            labelSize = new Label();
+            chbSpecial = new CheckBox();
             SuspendLayout();
             // 
             // txtSenha
@@ -59,11 +59,11 @@
             btnGerar.FlatStyle = FlatStyle.Flat;
             btnGerar.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnGerar.ForeColor = Color.Black;
-            btnGerar.Location = new Point(134, 108);
+            btnGerar.Image = Properties.Resources.play;
+            btnGerar.Location = new Point(185, 108);
             btnGerar.Name = "btnGerar";
-            btnGerar.Size = new Size(256, 46);
-            btnGerar.TabIndex = 1;
-            btnGerar.Text = "Generate!";
+            btnGerar.Size = new Size(154, 46);
+            btnGerar.TabIndex = 0;
             btnGerar.UseVisualStyleBackColor = false;
             btnGerar.Click += btnGerar_Click;
             // 
@@ -90,8 +90,9 @@
             txtTamanho.Location = new Point(7, 81);
             txtTamanho.MaxLength = 2;
             txtTamanho.Name = "txtTamanho";
+            txtTamanho.PlaceholderText = "Size";
             txtTamanho.Size = new Size(49, 21);
-            txtTamanho.TabIndex = 0;
+            txtTamanho.TabIndex = 1;
             txtTamanho.TextAlign = HorizontalAlignment.Center;
             // 
             // Title
@@ -105,16 +106,17 @@
             Title.TabIndex = 10000;
             Title.Text = "ezPasswords";
             // 
-            // labelSize
+            // chbSpecial
             // 
-            labelSize.AutoSize = true;
-            labelSize.BackColor = Color.Transparent;
-            labelSize.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            labelSize.Location = new Point(16, 63);
-            labelSize.Name = "labelSize";
-            labelSize.Size = new Size(27, 15);
-            labelSize.TabIndex = 10001;
-            labelSize.Text = "Size";
+            chbSpecial.AutoSize = true;
+            chbSpecial.BackColor = Color.Transparent;
+            chbSpecial.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            chbSpecial.Location = new Point(7, 124);
+            chbSpecial.Name = "chbSpecial";
+            chbSpecial.Size = new Size(108, 19);
+            chbSpecial.TabIndex = 10001;
+            chbSpecial.Text = "Include Specials?";
+            chbSpecial.UseVisualStyleBackColor = false;
             // 
             // FormPrincipal
             // 
@@ -123,7 +125,7 @@
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.wallpaper;
             ClientSize = new Size(524, 169);
-            Controls.Add(labelSize);
+            Controls.Add(chbSpecial);
             Controls.Add(Title);
             Controls.Add(txtTamanho);
             Controls.Add(btnCopy);
@@ -146,6 +148,6 @@
         private Button btnCopy;
         private TextBox txtTamanho;
         private Label Title;
-        private Label labelSize;
+        public CheckBox chbSpecial;
     }
 }

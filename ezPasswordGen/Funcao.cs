@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ezPasswordGen
 {
-    public class Repositorio
+    public class Funcao
     {
+        public string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         public string GerarSenha(int tamanho)
         {
-            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
             string senha = string.Empty;
 
             Random random = new Random();
