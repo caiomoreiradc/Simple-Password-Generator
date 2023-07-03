@@ -72,7 +72,7 @@
             btnCopy.BackColor = Color.White;
             btnCopy.Cursor = Cursors.Hand;
             btnCopy.FlatStyle = FlatStyle.Flat;
-            btnCopy.Font = new Font("Nexa Heavy", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCopy.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnCopy.ForeColor = Color.Black;
             btnCopy.Image = Properties.Resources.copybutton;
             btnCopy.Location = new Point(459, 77);
@@ -99,10 +99,10 @@
             // 
             Title.AutoSize = true;
             Title.BackColor = Color.Transparent;
-            Title.Font = new Font("Slant", 47.9999924F, FontStyle.Regular, GraphicsUnit.Point);
-            Title.Location = new Point(75, 7);
+            Title.Font = new Font("Microsoft Sans Serif", 47.9999924F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.Location = new Point(65, 1);
             Title.Name = "Title";
-            Title.Size = new Size(374, 67);
+            Title.Size = new Size(414, 73);
             Title.TabIndex = 10000;
             Title.Text = "ezPasswords";
             // 

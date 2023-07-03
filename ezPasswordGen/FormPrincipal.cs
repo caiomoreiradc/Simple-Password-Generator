@@ -21,7 +21,7 @@ namespace ezPasswordGen
         {
             if (txtTamanho.Text == string.Empty)
                 txtTamanho.Text = "8";
-            
+
             int tamanho = Convert.ToInt32(txtTamanho.Text);
             return tamanho;
         }
