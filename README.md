@@ -11,3 +11,7 @@ Gera as senhas utilizando uma string com os caracteres válidos a serem utilizad
 1. Insira o tamanho das senhas que deseja gerar.
 2. Clique no botão "Generate".
 3. Copie a senha clicando no botão de copiar.
+
+## Screenshot
+
+![App Screenshot](https://imgur.com/aIoVuqc.jpeg)
